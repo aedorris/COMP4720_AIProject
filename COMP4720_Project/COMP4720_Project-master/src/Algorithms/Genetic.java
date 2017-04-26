@@ -89,7 +89,6 @@ public class Genetic {
     	// This gives us some leeway in the population. 
     	float cost = Cost(character.location(), goal.location());
     	float max_cost = cost + (0.5f * cost);
- 
     	return -Cost(TotalMoveLocation(chromosome), goal.location()) - (max_cost / 100.0f);
     }
     

@@ -37,10 +37,14 @@ public class Controller {
     	SimulatedAnnealing simulatedAnnealing = new SimulatedAnnealing(gui);
     	
     	long start = System.currentTimeMillis();
-    	System.out.print("Start: " + start + "; ");
-    	for (int i = 0; i < 50; i++)
-    		simulatedAnnealing.Simulate();
+    	System.out.println("Start: " + start + "; ");
+    	int numRight = 0;
+    //	for (int i = 0; i < 50; i++) {
+    		if(simulatedAnnealing.Simulate())
+    			numRight++;
+   // 	}
     	System.out.println("End time: " + ((System.currentTimeMillis() - start) / 1000));
+    	System.out.println("Number right: " + numRight);
     }
     
     public void Genetic() {
@@ -49,11 +53,15 @@ public class Controller {
     	// Runtime: 13.134 +- 1ms
     	Genetic genetic = new Genetic(gui);
     	
-        	for (int i = 0; i < 50; i++) {
-            	long start = System.currentTimeMillis();
-        		if(genetic.Simulate())
-        			System.out.println(((System.currentTimeMillis() - start) / 1000));
-        	}
+    	long start = System.currentTimeMillis();
+    	System.out.println("Start: " + start + "; ");
+    	int numRight = 0;
+   // 	for (int i = 0; i < 50; i++) {
+    		if(genetic.Simulate())
+    			numRight++;
+ //   	}
+    	System.out.println("End time: " + ((System.currentTimeMillis() - start) / 1000));
+    	System.out.println("Number right: " + numRight);
     }
     
     public enum UnitType {

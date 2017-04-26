@@ -30,7 +30,10 @@ public class SimulatedAnnealing {
     
     // Returns the euclidean distance between the cell and the target.
     private float Cost(Location current, Location target) {
-    	return (float)Math.sqrt(
+    	System.out.println((float)(
+    		Math.abs((target.row() - current.row()) * (target.row() - current.row())) + 
+    		Math.abs((target.col() - current.col()) * (target.col() - current.col()))));
+    	return (float)(
     		Math.abs((target.row() - current.row()) * (target.row() - current.row())) + 
     		Math.abs((target.col() - current.col()) * (target.col() - current.col())));
     }
