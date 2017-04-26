@@ -31,35 +31,29 @@ public class Controller {
     }
     
     public void SimulatedAnnealing() {
-    	// Algorithm Analysis
-    	// Iterations: 87 average, Best: 66
-    	// Runtime: 13.134 +- 1ms
     	SimulatedAnnealing simulatedAnnealing = new SimulatedAnnealing(gui);
     	
     	long start = System.currentTimeMillis();
     	System.out.println("Start: " + start + "; ");
     	int numRight = 0;
-    //	for (int i = 0; i < 50; i++) {
+    	for (int i = 0; i < 50; i++) {
     		if(simulatedAnnealing.Simulate())
     			numRight++;
-   // 	}
+    	}
     	System.out.println("End time: " + ((System.currentTimeMillis() - start) / 1000));
     	System.out.println("Number right: " + numRight);
     }
     
     public void Genetic() {
-    	// Algorithm Analysis
-    	// Iterations: 87 average, Best: 66
-    	// Runtime: 13.134 +- 1ms
     	Genetic genetic = new Genetic(gui);
     	
     	long start = System.currentTimeMillis();
     	System.out.println("Start: " + start + "; ");
     	int numRight = 0;
-   // 	for (int i = 0; i < 50; i++) {
+    	for (int i = 0; i < 50; i++) {
     		if(genetic.Simulate())
     			numRight++;
- //   	}
+    	}
     	System.out.println("End time: " + ((System.currentTimeMillis() - start) / 1000));
     	System.out.println("Number right: " + numRight);
     }
